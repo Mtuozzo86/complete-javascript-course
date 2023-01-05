@@ -1,0 +1,11 @@
+4 fundamental principles
+ABSTRACTION
+    Ignore or hide details that don't matter.  Gives an overview
+ENCAPSULATION
+    Keep methods private inside the class.  Some methods can be exposed as a public interface (API)
+INHERITANCE
+    Makes properties and methods available to a child class.  Reuse common logic.
+POLYMORPHISM 
+    A child class can overwrite a method inherited from a parent class.
+
+
