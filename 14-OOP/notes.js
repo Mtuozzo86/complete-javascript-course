@@ -1,5 +1,5 @@
 
-
+====================
 4 fundamental principles
 ABSTRACTION
     Ignore or hide details that don't matter.  Gives an overview
@@ -108,3 +108,32 @@ class Person {
 }
 const someGuy = new Person('Mike Tuozzo', 1986) -> this will set the fullName because there is a space 
 ---
+
+
+==============Static Methods===============
+
+The static keyword defines a static method or property for a class. Neither static methods nor static properties can be called on instances of the class. Instead, they're called on the class itself.
+
+Static methods are often utility functions, such as functions to create or clone objects, whereas static properties are useful for caches, fixed-configuration, or any other data you don't need to be replicated across instances.
+
+
+==============Object.create===============
+
+There are no constructor function and no 'new' operator
+Manually set prototype of an object
+
+const PersonProto = {
+  calcAge() {
+    console.log(2023 - this.yearIWasBorn)
+  }
+}
+
+any object now made will have the prototypes in PersonProto
+const dude = Object.create(PersonProto) // {}
+dude will be an empty object at first, but the calAge function has a this property, make the same property on dude and the function will work when you use dude.calcAge()
+dude.yearIwasBorn = 1975 // use the same property name in the PersonProto
+dude.calcAge() //result of the function
+
+
+==============Inheritance Between "Classes": Constructor Functions===============
+
